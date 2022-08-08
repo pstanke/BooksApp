@@ -121,7 +121,7 @@
           bookFilter.name == 'filter'
         ) {
           // check if input is checked
-          if (bookFilter.checked == true) {
+          if (bookFilter.checked) {
             // add bookFilter.value to filters array
             filters.push(bookFilter.value);
 
@@ -163,7 +163,7 @@
           }
         }
         // check if shouldBeHidden is true
-        if (shouldBeHidden == true) {
+        if (shouldBeHidden) {
           // get bookImage based on data-id equal to book.id
           const bookImage = document.querySelector(`[data-id="${book.id}"]`);
 
@@ -171,7 +171,7 @@
           bookImage.classList.add(className.hidden);
 
           // check if shouldBeHidden is false
-        } else if (shouldBeHidden == false) {
+        } else {
           // get bookImage based on data-id equal to book.id
           const bookImage = document.querySelector(`[data-id="${book.id}"]`);
 
